@@ -1,0 +1,2 @@
+class PhotographyJobsController < ApplicationController
+end
