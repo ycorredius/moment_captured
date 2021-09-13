@@ -18,6 +18,6 @@
 #
 #  fk_rails_...  (users_id => users.id)
 #
-class Profile < ApplicationRecord
-    belongs_to :users
+class Profile<ApplicationRecord
+    belongs_to :user
 end
