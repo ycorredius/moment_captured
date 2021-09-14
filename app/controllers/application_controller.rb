@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
+    def configure_permitted_parameters
+        devise_parameter_sanitizer.permit(:sign_up, keys: [:profile[:first_name,:last_name,:bio]])
+      end
+      
     def after_sign_in_path_for(user) 
-        user_path(user)
+                user_profile_path(user,user.profile.id)
     end 
-
-    def after_sign_up_path_for(user)
-        user_profile_index_path(user)
-    end
 end
