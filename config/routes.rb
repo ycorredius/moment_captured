@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :photography_jobs
-  devise_for :users
-  resources :users do
-    resources :profile, only: %i[show create update]
-  end 
   root to: "home#index"
+  resources :photography_jobs
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  resources :users do
+    resources :profiles
+  end 
 end
