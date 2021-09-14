@@ -1,7 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe "Profiles", type: :request do
-  describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
+  describe "GET profiles/new" do
+    it"renders new profile creation form" do
+      get "/users/:user_id/profiles/new"
+      expect(response).to render_template(:new)
+    end
+
+    it"creates profile and redirect to show " do
+      user = User.create(email:"abc@gmail.com",password:"password") 
+      post "/users/#{user.id}/profiles", params:{user_id: user.id,profile: {first_name:  "Boppy"}}
+      expect(response).to redirect_to(user_profile_url(user.id,assigns(:profile)))
+      follow_redirect!
+      expect(response).to render_template(:show)
+      expect(response.body).to include("This is profile show page")
+    end
   end
 end
