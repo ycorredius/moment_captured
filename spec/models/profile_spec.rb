@@ -30,7 +30,7 @@ RSpec.describe Profile, type: :model do
         end
 
         it"should require a user_id"do
-            user = User.create(email:"abc@gmail.com",password:"password") 
+            user = User.create!(email:"abc@gmail.com",password:"password") 
             profile = Profile.new(first_name:'bob',last_name:"smith")
             profile.user = user
             expect(subject).to be_truthy
