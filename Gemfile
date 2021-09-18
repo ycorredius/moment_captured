@@ -18,6 +18,8 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
+gem 'bootstrap', '~> 5.1'
+gem 'jquery-rails'
 gem 'rubocop', require: false
 gem 'annotate'
 gem 'bootsnap', '>= 1.4.4', require: false
