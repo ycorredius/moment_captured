@@ -13,10 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # POST /resource
   def create
-    super do |resource|
-      binding.pry
-      BackgroundWorker.trigger(resource)
-    end
+    super
   end
 
   # GET /resource/edit

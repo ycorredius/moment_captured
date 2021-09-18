@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
       end
       
     def after_sign_in_path_for(user) 
-                user_profile_path(user,user.profile.id)
+      user_profile_path(user,user.profile)
     end 
 end
