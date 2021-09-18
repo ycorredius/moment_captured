@@ -4,7 +4,7 @@
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div>
-    <%= f.fields_for :profile, resource.profile do| profile_form| %>
+    <%= f.fields_for :profile_attributes, resource.profile do| profile_form| %>
       <div>
         <%= profile_form.label :first_name %>
         <%= profile_form.text_field :first_name %>

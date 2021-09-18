@@ -3,7 +3,5 @@ Rails.application.routes.draw do
   resources :photography_jobs
   devise_for :users, controllers: { registrations: 'users/registrations' }
   
-  resources :users do
-    resources :profiles
-  end 
+  resources :profiles, only: %i[edit update show]
 end

@@ -1,7 +1,7 @@
 <p>This is profile show page</p>
 
-<%= @user.profile.first_name %>
+<%= @profile.first_name %>
 
 
-<%= link_to 'Edit Profile', edit_user_profile_path(@user,@user.profile) %>
+<%= link_to 'Edit Profile', edit_profile_path(@profile) %>
 <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
