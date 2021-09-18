@@ -5,17 +5,22 @@
 
   <div>
     <%= f.fields_for :profile_attributes, resource.profile do| profile_form| %>
-      <div>
+      <div class="field">
         <%= profile_form.label :first_name %>
         <%= profile_form.text_field :first_name %>
       </div>
-      <div>
+      <div class="field">
         <%= profile_form.label :last_name %>
         <%= profile_form.text_field :last_name %>
       </div>
-      <div>
+      <div class="field">
         <%= profile_form.label :bio %>
         <%= profile_form.text_area :bio %>
+      </div>
+
+      <div class="field">
+        <%= profile_form.label :photographer %>
+        <%= select_tag(:photographer,options_for_select(["Yes","No"],[true,false])) %>
       </div>
     <% end %>
   </div>
