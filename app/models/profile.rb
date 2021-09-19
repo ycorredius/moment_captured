@@ -23,6 +23,9 @@
 class Profile<ApplicationRecord
     belongs_to :user
 
+    has_one_attached :avatar
+    has_many_attached :photographs
+
     def name 
         self.first_name + " " + self.last_name
     end 
