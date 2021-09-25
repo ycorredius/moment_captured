@@ -20,7 +20,7 @@
 
       <div class="field">
         <%= profile_form.label :photographer %>
-        <%= select_tag(:photographer,options_for_select({"Yes":true,"No":false})) %>
+        <%= profile_form.select(:photographer,{"Yes":true,"No":false},{include_blank:"Select"},required:true) %>
       </div>
     <% end %>
   </div>

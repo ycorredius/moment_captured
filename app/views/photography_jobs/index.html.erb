@@ -1,0 +1,10 @@
+<h1>Jobs Board</h1>
+<% if !@jobs.empty? %>
+    <ul>
+        <% @jobs.each do |f|%>
+            <li><%= f.title %> </li>
+        <% end%>
+    </ul>
+<% else%>
+    <h2>No jobs available</h2>
+<% end %>

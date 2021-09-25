@@ -2,8 +2,10 @@
 
 <div>
     <%= @profile.name %>
+    <% if @profile.photographer%>
+        <p> I am a photographer</p>
+    <% end%>
 </div>
 
 
 <%= link_to 'Edit Profile', edit_profile_path(@profile) %>
-<%= link_to 'Logout', destroy_user_session_path, method: :delete %>
