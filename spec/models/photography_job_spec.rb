@@ -21,4 +21,7 @@
 require 'rails_helper'
 
 RSpec.describe PhotographyJob, type: :model do
+    it'require a job title'
+        
+    end 
 end
