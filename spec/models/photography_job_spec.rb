@@ -3,12 +3,13 @@
 # Table name: photography_jobs
 #
 #  id          :bigint           not null, primary key
-#  completed   :boolean
+#  completed   :boolean          default(FALSE)
 #  description :string
 #  title       :string
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #  user_id     :bigint           not null
+#  users_id    :integer
 #
 # Indexes
 #

@@ -1,3 +1,7 @@
 <h1><%= @photographyjob.title %></h1>
 
 <p><%= @photographyjob.description %></p>
+
+<% if(current_user.profile.photographer)%>
+    <%= link_to "Apply to job"%>
+<% end %>

@@ -52,8 +52,9 @@ ActiveRecord::Schema.define(version: 2021_09_12_183539) do
   create_table "photography_jobs", force: :cascade do |t|
     t.string "title"
     t.string "description"
-    t.boolean "completed"
+    t.boolean "completed", default: false
     t.bigint "user_id", null: false
+    t.integer "users_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_photography_jobs_on_user_id"
