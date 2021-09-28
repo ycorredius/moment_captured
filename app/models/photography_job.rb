@@ -19,5 +19,5 @@
 #  fk_rails_...  (user_id => users.id)
 #
 class PhotographyJob < ApplicationRecord
-  belongs_to :users
+  belongs_to :user
 end

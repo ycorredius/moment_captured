@@ -26,4 +26,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   accepts_nested_attributes_for :profile
+  accepts_nested_attributes_for :photography_jobs
 end
