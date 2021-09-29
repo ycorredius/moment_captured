@@ -3,5 +3,5 @@
 <p><%= @photographyjob.description %></p>
 
 <% if(current_user.profile.photographer)%>
-    <%= link_to "Apply to job"%>
+    <%= link_to "Apply to job", new_photography_job_job_application_path(@photographyjob) %>
 <% end %>

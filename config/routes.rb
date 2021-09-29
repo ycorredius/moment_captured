@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :photography_jobs do 
+    resources :job_applications
+  end
+  resources :job_applications
   root to: "home#index"
   resources :photography_jobs
   devise_for :users, controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }

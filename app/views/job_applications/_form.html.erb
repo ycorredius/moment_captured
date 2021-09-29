@@ -1,0 +1,28 @@
+<%= form_with model: @jobapplication do |f| %>
+    <div>
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+    </div>  
+    <div>
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+    </div> 
+    <div>
+        <%= f.label :email %>
+        <%= f.email_field :email %>
+    </div>
+    <div>
+        <%= field_for(:address) do |address_field| %>
+            <div>
+                <%= address_field.label street_address%>
+                <%= address_field.text_field street_address %>
+            </div>
+            <div>   
+                <%= address_field.label city %>
+                <%= address_field.text_field city %>
+            </div>
+        <% end%>
+    </div>
+
+    <%= f.submit "Submit Application" %>
+<% end %>
