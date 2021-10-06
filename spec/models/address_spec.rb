@@ -3,6 +3,10 @@
 # Table name: addresses
 #
 #  id                 :bigint           not null, primary key
+#  city               :string
+#  state              :string
+#  street             :string
+#  zip_code           :integer
 #  created_at         :datetime         not null
 #  updated_at         :datetime         not null
 #  job_application_id :bigint           not null

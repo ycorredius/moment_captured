@@ -21,5 +21,6 @@
 #
 class PhotographyJob < ApplicationRecord
   belongs_to :user
-  has_many :users, as: :applicants, class_name: "user", foreign_key: "users_id"
+  has_many :applications
+  has_many :users, as: :applicants, through: :applications, dependent: :destory
 end

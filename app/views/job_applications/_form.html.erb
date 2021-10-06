@@ -12,14 +12,22 @@
         <%= f.email_field :email %>
     </div>
     <div>
-        <%= field_for(:address) do |address_field| %>
+        <%= fields_for(:address_attributes) do |address_field| %>
             <div>
-                <%= address_field.label street_address%>
-                <%= address_field.text_field street_address %>
+                <%= address_field.label :street%>
+                <%= address_field.text_field :street %>
             </div>
             <div>   
-                <%= address_field.label city %>
-                <%= address_field.text_field city %>
+                <%= address_field.label  :city %>
+                <%= address_field.text_field :city %>
+            </div>
+            <div>
+                <%= address_field.label :zip_code %>
+                <%= address_field.text_field :zip_code %>
+            </div>
+            <div>
+                <%= address_field.label :state %>
+                <%= address_field.text_field :state %>
             </div>
         <% end%>
     </div>

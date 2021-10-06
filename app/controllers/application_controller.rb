@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     before_action :authenticate_user!, only: %i[creaet new update edit destroy]
 
     def after_sign_in_path_for(user)
-     profile_path(user.profile)
+        profile_path(user.profile)
     end
 
     protected

@@ -4,6 +4,7 @@ class CreateAddresses < ActiveRecord::Migration[6.1]
       t.references :job_application, null: false, foreign_key: true
       t.string :street
       t.string :city
+      t.string :state
       t.integer :zip_code
       
       t.timestamps
