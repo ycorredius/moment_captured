@@ -21,6 +21,9 @@ gem 'devise'
 gem 'rubocop', require: false
 gem 'annotate'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'bootstrap', '~> 5.0.1'
+gem 'jquery-rails'
+
 
 group :development, :test do
   gem 'rspec-rails'

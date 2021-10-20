@@ -1,1 +1,9 @@
-@import "bootstrap/scss/bootstrap";
+.navbar{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.navlink{
+	text-decoration:none;
+}
