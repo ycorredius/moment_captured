@@ -22,5 +22,6 @@
 class PhotographyJob < ApplicationRecord
   belongs_to :user
   has_many :applications
+  has_many :pending_applications, through: :applications
   has_many :users, as: :applicants, through: :applications, dependent: :destroy
 end

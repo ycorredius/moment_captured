@@ -7,6 +7,7 @@ class JobApplicationsController < ApplicationController
     
     def create
         @application = @user.job_applications.build(jobapplication_params)
+        @application.pending_applications.build
         if @application.after_save 
             redirect_to photography_jobs_path(@application)
         else 

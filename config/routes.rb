@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :pending_applications
   resources :photography_jobs do 
     resources :job_applications
   end
