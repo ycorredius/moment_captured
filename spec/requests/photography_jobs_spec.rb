@@ -10,7 +10,7 @@ RSpec.describe "PhotographyJobs", type: :request do
         expect(@user.photography_jobs).not_to eq(0)
     end
 
-    it"allows a photographer to apply to a job"
+    it"creates a pending application" do
         
     end
 end
