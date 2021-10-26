@@ -1,9 +1,9 @@
-.navbar{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-}
+@import "bootstrap/scss/bootstrap";
 
 .navlink{
 	text-decoration:none;
+	}
+
+.footer{
+	 margin-top: auto;
 }

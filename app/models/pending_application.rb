@@ -9,5 +9,6 @@
 #  photography_job_id :integer
 #
 class PendingApplication < ApplicationRecord
-    belongs_to :job_application, dependent: :destroy
+
+  belongs_to :job_application, dependent: :destroy
 end

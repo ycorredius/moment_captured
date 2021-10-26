@@ -1,32 +1,31 @@
-<div class="navbar">
-<ul>
-  <h1>Moments Captured</h1>
-  <% if current_user %>
-        <div>
-          <%= link_to "My Profile", profile_path(current_user.profile),class:"navlink"%>
-        </div>
-        <% else%>
-          <div> 
-            <%= link_to "Sign Up", new_user_registration_path, class:"navlink"%>
-          </div>
-          <div>
-            <%= link_to "Login", new_user_session_url,class:"navlink" %>
-        <% end%>
-        <% if current_user %>
-        <div>
-          <%= link_to 'Jobs', photography_jobs_path, class:"navlink"%>
-        </div>
-        <div>
-          <%= link_to 'Create Job', new_photography_job_path, class:"navlink"%>
-        </div >
-  <% end %>
-  <% if current_user%>
-          <div >
-            <%= button_to 'Logout', destroy_user_session_url, method: :delete%>
-          </div>
-          <% else %>
-          
-          </div>
-  <% end%>
+  <div class="d-flex flex-row bg-dark justify-content-evenly">
+  <h1 class="text-muted">Moments Captured</h1> 
+  <ul class="nav justify-content-center  text-muted ">
+    <% if current_user %> 
+          <li class="nav-item">
+            <%= link_to "My Profile", profile_path(current_user.profile),class:"nav-link  "%>
+          </li>
+          <% else%>
+            <li class="nav-item"> 
+              <%= link_to "Sign Up", new_user_registration_path, class:"nav-link"%>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Login", new_user_session_url,class:"nav-link" %>
+            </li>
+          <% end%>
+          <% if current_user %>
+          <li class="nav-item">  
+            <%= link_to 'Jobs', photography_jobs_path, class:"nav-link"%>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Create Job', new_photography_job_path, class:"nav-link"%>
+          </li>
+    <% end %>
+    
 </ul>
+<% if current_user%>
+            <li class="nav-item">
+              <%= button_to 'Logout', destroy_user_session_url, method: :delete%>
+            </li>
+    <% end%>
 </div>
